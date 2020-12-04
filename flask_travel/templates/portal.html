@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+       
+        <h1>Hello, {{ current_user.username }}!</h1>
+        <!-- jengo is python based. so everytime we use squigly with percent, it allows us to do some python -->
+        {% if current_user.is_authenticated %}
+            {% for cn in user_cns %}
+                <div class="container">
+                    <h3>
+                        <a href="{{ url_for('cn_detail', cn_id = cn.id) }}">BLOG TITLE: {{ cn.title }}</a>
+                    </h3>
+                    </h3>
+                    <h4>BLOGGER NAME: {{ cn.client }}</h4>
+                    <h3>BLOG ENTRY: {{ cn.content }}</h3>
+                </div>
+        {% endfor %}
+    {% else %}
+    <h2>Please <a href="{{ url_for('login') }}">Login</a> or <a href="{{ url_for('register') }}">Register</a>
+    </h2>
+
+    {% endif %}
+{% endblock content %}
+
+<a href="{{ url_for('login') }}">Login</a>

@@ -1,0 +1,53 @@
+{% extends 'baseindexpage3.html' %}
+
+{% block content %}
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid 19 API in JavaScript</title>
+    <link rel="stylesheet" href="../static/css/stylespage3.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../static/js/restrictions.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mt-5" id="color">Covid 19 Live Data</h1>
+        <br><br>
+        <table class="table table-hover">
+            <thread>
+                <tr id="color">
+                    <th>Total Cases</th>
+                    <th>Total Deaths</th>
+                    <th>Total Recovered</th>
+                </tr>
+            </thread>
+            <tbody id="color">
+                <tr id="data" >
+                    
+                </tr>
+            </tbody>
+
+        </table>
+        <br>
+        <button onclick="refreshData()" class="btn btn-danger btn-block">
+            Refresh Data
+        </button>
+    </div>
+    
+</body>
+
+
+
+</html>
+
+{% endblock content %}
+
+
+

@@ -1,0 +1,8 @@
+body {
+  background-image: url("https://images.unsplash.com/photo-1591632175697-f07e2d75dacb?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mzd8fGNvdmlkJTIwdHJhdmVsfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60");
+  background-size: cover; 
+ }
+
+ #color{
+   color: lightsteelblue;
+ }

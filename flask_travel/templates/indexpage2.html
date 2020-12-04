@@ -1,0 +1,116 @@
+{% extends 'baseindexpage2.html' %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+<link rel="stylesheet" href="../static/css/stylespage2.css">
+<script src="../static/js/main.js"></script>
+<title>Travel WEATHER API </title>
+</head>
+<body>
+
+
+
+<!--Search by city or zip code-->
+<div class="d-flex justify-content-center">
+    <form class="form-inline">
+        <div class="form-group mx-sm-3 mb-2">
+            <label for="inputCity" class="sr-only">City</label>
+            <input type="text" class="form-control" id="city" placeholder="City">
+          </div>
+          <div class="form-group mx-sm-3 mb-2">
+            <label for="inputZipcode" class="sr-only">Zip Code</label>
+            <input type="number" class="form-control" id="zipcode" placeholder="Zipcode">
+          </div>
+          <button type="button" class="btn btn-primary" onclick="getJson()">Travel Forecast</button>
+      </form>
+    </div>
+
+<!--Info Container starts-->
+
+<h1 id="cityOutput"></h1>
+<h1 id="zipcodeOutput"></h1>
+
+<div class="d-flex justify-content-center">
+<!--View: High-->
+
+<div class="card w-25">
+<div class="text-center">
+    <div class="card bg-dark text-light">
+    <div class="card-body">
+    <h5 class="card-header">HIGH</h5>
+    <div class="card-body">
+      <h5 class="card-title" id="high"></h5>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+<!--View: Low-->
+
+<div class="card w-25">
+    <div class="text-center">
+    <div class="card bg-dark text-light">
+    <div class="card-body">
+    <h5 class="card-header">LOW</h5>
+    <div class="card-body">
+      <h5 class="card-title" id="low"></h5>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<!--View: Forecast-->
+
+<div class="card w-25">
+    <div class="text-center">
+    <div class="card bg-dark text-light">
+    <div class="card-body">
+    <h5 class="card-header">FORECAST</h5>
+    <div class="card-body">
+      <h5 class="card-title" id="forecast"></h5>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+<!--View: Humidity-->
+
+
+<div class="card w-25">
+    <div class="text-center">
+    <div class="card bg-dark text-light">
+    <div class="card-body">
+    <h5 class="card-header">HUMIDITY</h5>
+    <div class="card-body">
+      <h5 class="card-title" id="humidity"></h5>
+    </div>
+  </div>
+</div>
+</div> 
+</div>
+</div>
+
+
+<!--Info Container ends-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+{% endblock content %}

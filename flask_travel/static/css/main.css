@@ -1,0 +1,25 @@
+.banner {
+    height: 50vh;
+    /* using ".." in front of the image lacation tells css to up one file to retrieve it */
+    background-image: url(https://images.unsplash.com/photo-1520637102912-2df6bb2aec6d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDF8fGljZWxhbmR8ZW58MHx8MHw%3D&auto=format&fit=crop&w=800&q=60);
+    background-size: cover;
+    background-position: 35% 50%;
+    /* the following instructions stretches to give a diamond effect */
+    -webkit-clip-path: polygon(0 0,100% 0,100% 80vh,0 100%);
+    clip-path: polygon(17% 23%, 50% 54%, 15% 0%, 94% 6%, 49% 56%, 100% 15%, 84% 83%, 50% 56%, 85% 100%, 13% 90%, 53% 54%, 0% 85%);
+    position: relative;
+
+    
+}
+
+.header-text{
+    display: flex;
+    justify-content: center;
+    padding-top: 20%;
+    left: 20rem;
+    top: 10rem;
+    color: white;
+
+
+}
+
